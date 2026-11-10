@@ -1,3 +1,33 @@
+# Système (macOS, Windows, WSL : les Zone.Identifier viennent des fichiers téléchargés sous WSL)
 .DS_Store
-*:Zone.Identifier
 Thumbs.db
+desktop.ini
+*:Zone.Identifier
+
+# Éditeurs et fichiers temporaires
+.vscode/
+.idea/
+*.swp
+*~
+
+# Secrets : au cas où un jour une capture, un export ou un script en contient
+.env
+.env.*
+*.pem
+*.key
+*.p12
+credentials*
+*.token
+
+# Brouillons et notes de travail : ils ne doivent jamais partir en public
+*.draft.*
+*.local.*
+PUBLISHING-NOTES*
+brouillons/
+scratch/
+tmp/
+
+# Sorties générées si un jour un script de rendu est ajouté
+node_modules/
+dist/
+.cache/
