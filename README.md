@@ -7,7 +7,7 @@ sécurité traités comme des exigences de conception, pas comme une finition.
 Ce dépôt est une vue publique choisie de mon travail : architecture, décisions, preuves. Le code
 source des projets reste privé.
 
-**GitHub** : [github.com/Marogold](https://github.com/Marogold) · **LinkedIn** : `[URL LinkedIn à ajouter]`
+**GitHub** : [github.com/Marogold](https://github.com/Marogold) · **LinkedIn** : [linkedin.com/in/gauthierpascal](https://www.linkedin.com/in/gauthierpascal/)
 
 ---
 
