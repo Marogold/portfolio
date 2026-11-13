@@ -1,4 +1,4 @@
-# Pascal Gauthier — Ingénierie logicielle & IA
+# Pascal Gauthier — Ingénierie Qualité & IA
 
 Je construis des produits où l'IA propose et où l'application décide. Les composants probabilistes
 vivent derrière des frontières déterministes, avec des tests, une chaîne de livraison et une
