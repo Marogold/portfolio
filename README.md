@@ -41,7 +41,7 @@ sécurité traités comme des exigences de conception, pas comme une finition.
 
 | | |
 |---|---|
-| **Statut** | Actif, non partagé <!-- À CONFIRMER --> · développement depuis 2026-07-26 |
+| **Statut** | Actif, non partagé · développement depuis 2026-07-26 |
 | **Surfaces** | Web / PWA, Android, Android TV (testées sur trois profils distincts) |
 | **Mon rôle** | Conception, développement, QA, livraison <!-- À CONFIRMER --> |
 | **Stack** | React · Vite · Fastify · Playwright · Capacitor · PostgreSQL · Semgrep / Supabase · Prisma |
@@ -81,10 +81,10 @@ capacité ne veut pas dire que l'IA doit agir : l'application garde l'autorité 
 |---|---|
 | Historique | environ 2 000 commits en 15 semaines |
 | Tests | 368 fichiers de tests, environ 4 200 cas (comptage statique) |
-| E2E | 65 scénarios <!-- À CONFIRMER : méthode (fichiers = 36 ?) --> |
-| Données | 36 modèles, 64 migrations <!-- À CONFIRMER : 64 dossiers ou 74 .sql ? --> |
+| E2E | 65 scénarios |
+| Données | 36 modèles, 64 migrations, 74 .sql |
 | Livraison | 22 workflows CI/CD, 88 actions épinglées par empreinte SHA |
-| Documentation | 189 pages sous `docs/`, liens vérifiés automatiquement <!-- À CONFIRMER : .md hors archive --> |
+| Documentation | 189 pages sous `docs/`, liens vérifiés automatiquement (pour les projets) |
 
 ### Ce qui est démontré
 
@@ -94,7 +94,7 @@ capacité ne veut pas dire que l'IA doit agir : l'application garde l'autorité 
   contexte applicatif.
 - **Qualité à plusieurs niveaux.** Unitaire, intégration, contrat d'API, base de données, E2E
   mockés et E2E réels, tests de propriétés sur les calculs, fuzzing ciblé de l'authentification.
-  La CI est elle-même testée. <!-- À CONFIRMER : 21 fichiers sous tests/unit/ci -->
+  La CI est elle-même testée.
 - **Livraison gouvernée.** Environnement de recette, UAT humaine, promotion explicite vers la
   production.
 - **AppSec dans le cycle.** Détection de secrets bloquante en PR (Gitleaks), SAST informatif
