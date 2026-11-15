@@ -31,4 +31,4 @@ revendiquée comme livrée.
 
 ## Voir aussi
 
-- [Comment le produit est construit avec des agents](../brewmaster-pro/architecture/ARCH-PUBLIC-003.png)
+- [Comment le produit est construit avec des agents](../brewno/architecture/ARCH-PUBLIC-003.png)

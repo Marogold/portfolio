@@ -1,27 +1,52 @@
-# Pascal Gauthier — Ingénierie logicielle & IA
+# Pascal Gauthier — Ingénierie Qualité & IA
 
 Je construis des produits où l'IA propose et où l'application décide. Les composants probabilistes
 vivent derrière des frontières déterministes, avec des tests, une chaîne de livraison et une
 sécurité traités comme des exigences de conception, pas comme une finition.
 
-Ce dépôt est une vue publique choisie de mon travail : architecture, décisions, preuves. Le code
-source des projets reste privé.
-
 **GitHub** : [github.com/Marogold](https://github.com/Marogold) · **LinkedIn** : [linkedin.com/in/gauthierpascal](https://www.linkedin.com/in/gauthierpascal/)
 
----
+**Stack** : React · Vite · Fastify · Capacitor · PostgreSQL / Supabase (pgvector) · Prisma · Vitest · Playwright · fast-check · GitHub Actions · Vercel
 
-## Par où commencer (5 minutes)
-
-1. [Le projet en chiffres](#brewmaster-pro--brewno-en-chiffres)
-2. [Cinq décisions d'architecture](projects/brewmaster-pro/decisions.md)
-3. Les diagrammes : [frontières du système et de l'IA](projects/brewmaster-pro/architecture/ARCH-PUBLIC-001.png),
-   [actions IA contrôlées](projects/brewmaster-pro/architecture/ARCH-PUBLIC-002.png),
-   [travail assisté par agents](projects/brewmaster-pro/architecture/ARCH-PUBLIC-003.png)
+> [!NOTE]
+> Ce dépôt est une vue publique choisie de mon travail : **architecture, décisions, preuves**.
+> Le code source des projets reste privé. Chaque projet est présenté de façon autonome dans son
+> propre dossier sous [`projects/`](projects/).
 
 ---
 
-## BrewMaster Pro / Brewno
+## Navigation rapide
+
+| Si vous avez… | Allez à |
+|---|---|
+| 1 minute | [Les projets](#projets) |
+| 5 minutes | [Les chiffres](#chiffres-clés) et [les cinq décisions d'architecture](projects/brewno/decisions.md) |
+| Envie de voir comment je pense | [Les diagrammes](#architecture), [la méthode](#méthode-de-travail-avec-des-agents) et [les principes](#principes-et-limites) |
+
+---
+
+## Projets
+
+| Projet | En une phrase | Statut | Fiche |
+|---|---|---|---|
+| [Brewno](#brewno) *(anciennement BrewMaster Pro)* | Assistant IA pour brasseurs : le modèle propose, l'application décide | En production, usage personnel | [Dossier](projects/brewno/README.md) |
+| [Memory-Cortex](#memory-cortex) | Mémoire projet pour le travail assisté par agents | En développement | [Dossier](projects/memory-cortex/README.md) |
+
+---
+
+## Brewno
+
+*Anciennement BrewMaster Pro.*
+
+> Parler à son application en langage naturel, sans qu'un modèle de langage puisse corrompre les données.
+
+| | |
+|---|---|
+| **Statut** | En production, utilisé en conditions réelles pour mes brassins personnels. Pas encore d'utilisateurs externes ; le lancement officiel est à l'étude, conditionné au financement et aux obligations légales. |
+| **Mon rôle** | Product owner et validateur humain. J'apporte les idées et les arbitrages, je valide chaque proposition, la recette et la promotion. Les agents consolident, implémentent, testent et déploient. |
+| **Surfaces** | Web / PWA, Android, Android TV (testées sur trois profils distincts) |
+| **Stack** | React · Vite · Fastify · Capacitor · PostgreSQL / Supabase · Prisma |
+| **Dossier complet** | [Fiche projet](projects/brewno/README.md) · [Décisions](projects/brewno/decisions.md) · [Architecture](projects/brewno/architecture/) |
 
 **Le problème.** Un brasseur veut agir sur sa session (ajouter un ingrédient, lancer un minuteur,
 consulter son stock) en langage naturel, sans qu'un modèle de langage puisse corrompre ses données.
@@ -31,87 +56,119 @@ détermine son niveau de risque (lecture, modification, action sensible) et seul
 métier exécutent. Il n'existe aucun chemin entre le modèle et la base de données. Disposer d'une
 capacité ne veut pas dire que l'IA doit agir : l'application garde l'autorité de l'exécuter.
 
-**Surfaces.** Application web/PWA, Android et Android TV, testées sur trois profils distincts.
+### Architecture
 
-Détail, diagrammes et limites : [page du projet](projects/brewmaster-pro/README.md).
+<p align="center">
+  <img src="projects/brewno/architecture/ARCH-PUBLIC-001.png"
+       alt="Frontières du système et de l'IA : le modèle probabiliste propose, les services métier déterministes exécutent, le retrieval est en lecture seule et le modèle n'a aucun accès direct à la base"
+       width="760">
+</p>
 
-### BrewMaster Pro / Brewno en chiffres
+<details>
+<summary>Du langage naturel à l'action contrôlée</summary>
 
-*Relevés dans le dépôt, 2026-11-09.*
+Trois niveaux de risque : lecture (exécution directe), modification (validation selon le contexte),
+action sensible (proposition seulement, confirmation explicite requise).
+
+<img src="projects/brewno/architecture/ARCH-PUBLIC-002.png"
+     alt="Du langage naturel à l'action contrôlée : trois niveaux de risque, lecture, modification et action sensible" width="760">
+
+</details>
+
+### Chiffres clés
+
+*Relevé statique du dépôt privé, 2026-11-15 (commit `927d005c`), produit par un script.*
 
 | Mesure | Valeur |
 |---|---|
-| Historique | environ 2 000 commits en 15 semaines (depuis 2026-07-26) |
-| Tests | 368 fichiers de tests unitaires et d'intégration, 65 scénarios E2E, environ 4 200 cas (comptage statique) |
-| Données | 36 modèles, 64 migrations versionnées |
-| Livraison | 22 workflows CI/CD, 88 actions épinglées par empreinte SHA |
-| Traçabilité | 366 issues référencées dans l'historique, 8 ADR, 12 décisions et 21 notes d'exploitation versionnées |
+| Historique | environ 2 000 commits en 16 semaines |
+| Tests | 433 fichiers de tests, environ 4 100 cas (comptage statique) |
+| E2E | 36 fichiers, 213 cas (comptage statique) |
+| Données | 36 modèles, 63 migrations versionnées |
+| Livraison | 22 workflows CI/CD, 88 actions sur 88 épinglées par empreinte SHA |
 | Documentation | 189 pages sous `docs/`, liens vérifiés automatiquement |
 
 ### Ce qui est démontré
 
 - **IA encadrée.** Intention structurée, trois niveaux de risque, confirmation explicite pour les
   actions sensibles, aucun accès direct modèle → base.
-- **Contexte et retrieval.** PostgreSQL/Supabase avec recherche vectorielle (pgvector) pour le
+- **Contexte et retrieval.** PostgreSQL / Supabase avec recherche vectorielle (pgvector) pour le
   contexte applicatif.
-- **Qualité à plusieurs niveaux.** Unitaire, intégration, contrat d'API, base de données,
-  E2E mockés et E2E réels, tests de propriétés sur les calculs, fuzzing ciblé de l'authentification.
-- **Livraison gouvernée.** Environnement de recette, UAT humaine, promotion explicite vers la production.
+- **Qualité à plusieurs niveaux.** Unitaire, intégration, contrat d'API, base de données, E2E
+  mockés et E2E réels, tests de propriétés sur les calculs, fuzzing ciblé de l'authentification.
+  La CI est elle-même testée (21 fichiers de tests dédiés).
+- **Livraison gouvernée.** Environnement de recette, UAT humaine, promotion explicite vers la
+  production.
 - **AppSec dans le cycle.** Détection de secrets bloquante en PR (Gitleaks), SAST informatif
-  (Semgrep Cloud, PR vers `master`/`staging` et push `master`), surveillance des dépendances
-  (Dependabot), permissions CI explicites sur 20 workflows sur 22.
+  (Semgrep Cloud), surveillance des dépendances (Dependabot), permissions CI explicites sur
+  20 workflows sur 22.
 
-### Décisions d'architecture choisies
+### Cinq décisions d'architecture
 
 Chacune est détaillée (contexte, options écartées, limite assumée) dans
-[decisions.md](projects/brewmaster-pro/decisions.md).
+[`decisions.md`](projects/brewno/decisions.md).
 
-1. **Dupliquer des formules, puis les verrouiller par un test de parité** plutôt que d'élargir un
-   correctif en refonte.
-2. **Séparer les E2E mockés des E2E réels** : un vert qui ne teste pas l'authentification réelle
-   avait laissé passer un bug en production.
-3. **Déléguer l'authentification** à un fournisseur dédié pour réduire la surface de sécurité
-   maintenue soi-même.
-4. **Une seule entité d'assistance**, conçue pour des mains gantées et une télécommande, avec une
-   écoute toujours déclenchée explicitement.
-5. **Des erreurs visibles, jamais de faux zéros** : un échec de chargement n'est pas une liste vide.
+1. **Dupliquer des formules, puis les verrouiller par un test de parité**, plutôt que d'élargir un correctif en refonte.
+2. **Séparer les E2E mockés des E2E réels.** Un vert qui ne testait pas l'authentification réelle avait laissé passer un bug en production.
+3. **Déléguer l'authentification** à un fournisseur dédié, pour réduire la surface de sécurité maintenue soi-même.
+4. **Une seule entité d'assistance**, conçue pour des mains gantées et une télécommande, avec une écoute toujours déclenchée explicitement.
+5. **Des erreurs visibles, jamais de faux zéros.** Un échec de chargement n'est pas une liste vide.
 
 ---
 
-## Comment je travaille avec des agents
+## Memory-Cortex
 
-Le développement est assisté par des agents, mais gouverné : un besoin, une boucle de proposition
-validée par un humain, des tests et une livraison en environnement de recette, une UAT humaine, puis
-la promotion. La mémoire projet est consultée selon le domaine de la tâche. Les agents la lisent et
-n'écrivent pas dans l'index : ce qu'ils retiennent passe par une revue en diff.
+> Couche de mémoire projet pour le travail assisté par agents.
 
-Détail : [ARCH-PUBLIC-003](projects/brewmaster-pro/architecture/ARCH-PUBLIC-003.png).
-
-## Memory-Cortex *(en développement)*
-
-Couche de mémoire projet pour le travail assisté par agents. Voir la
-[page dédiée](projects/memory-cortex/README.md).
+| | |
+|---|---|
+| **Statut** | En développement. La direction (réduire le couplage du contexte projet aux outils et aux agents) n'est pas revendiquée comme livrée. |
+| **Principe** | Le Markdown versionné dans Git fait foi ; l'index de rappel en est dérivé, jetable et reconstructible. |
+| **Dossier complet** | [Fiche projet](projects/memory-cortex/README.md) |
 
 ---
 
-## Principes d'ingénierie
+## Méthode de travail avec des agents
 
-- **Frontières explicites.** Séparer raisonnement probabiliste, autorité applicative et exécution
-  déterministe.
+Le développement est assisté par des agents, mais **gouverné**. L'IA qui construit le produit est
+distincte de l'IA dans le produit.
+
+1. un besoin et un brainstorm avec les agents,
+2. une proposition consolidée, validée par un humain,
+3. des tests et une livraison en environnement de recette,
+4. une UAT humaine,
+5. la promotion.
+
+La mémoire projet est consultée selon le domaine de la tâche. Les agents la lisent et n'écrivent
+pas dans l'index : ce qu'ils retiennent passe par une revue en diff.
+
+<p align="center">
+  <img src="projects/brewno/architecture/ARCH-PUBLIC-003.png"
+       alt="Comment le produit est construit avec des agents : proposition validée par un humain, recette, UAT, promotion, mémoire projet en lecture seule pour l'agent"
+       width="760">
+</p>
+
+---
+
+## Principes et limites
+
+**Principes d'ingénierie**
+
+- **Frontières explicites.** Séparer raisonnement probabiliste, autorité applicative et exécution déterministe.
 - **Confiance vérifiable.** Une affirmation sans test, contrôle automatisé ou revue n'est pas publiée.
 - **Sécurité dans le cycle.** Intégrée au développement et à la CI, pas seulement en aval.
-- **Divulgation maîtrisée.** Architecture et décisions oui ; secrets, configurations, prompts et
-  mécanismes internes non.
-- **Limites dites.** SAST informatif et non bloquant ; Memory-Cortex en développement ; deux
-  workflows sans bloc de permissions explicite.
+- **Divulgation maîtrisée.** Architecture et décisions oui ; secrets, configurations, prompts et mécanismes internes non.
 
-## Stack
+> [!IMPORTANT]
+> **Limites assumées.**
+> Brewno n'a pas encore d'utilisateurs externes. Le SAST est informatif et non bloquant.
+> Deux workflows sur 22 n'ont pas encore de bloc de permissions explicite.
+> Memory-Cortex est en développement.
+> Le code étant privé, les chiffres ci-dessus sont des relevés de l'auteur, datés et produits par
+> script, mais non vérifiables de l'extérieur.
 
-| Domaine | Technologies |
-|---|---|
-| Application | React, Vite, Fastify, Capacitor |
-| Données | PostgreSQL, Supabase, pgvector, Prisma |
-| IA | Modèle de langage, RAG, actions contrôlées |
-| Qualité | Vitest, Playwright, fast-check |
-| Sécurité et chaîne logicielle | Gitleaks, Semgrep Cloud, Dependabot, GitHub Actions |
-| Livraison | GitHub Actions, Vercel |
+---
+
+## Contact
+
+[LinkedIn](https://www.linkedin.com/in/gauthierpascal/) · [GitHub](https://github.com/Marogold)
