@@ -64,7 +64,7 @@ capacité ne veut pas dire que l'IA doit agir : l'application garde l'autorité 
 </p>
 
 <details>
-<summary>Deux autres diagrammes</summary>
+<summary>Un autre diagramme</summary>
 
 **Actions IA contrôlées**
 
