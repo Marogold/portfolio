@@ -43,7 +43,7 @@ sécurité traités comme des exigences de conception, pas comme une finition.
 | | |
 |---|---|
 | **Statut** | En production, utilisé en conditions réelles pour mes brassins personnels. Pas encore d'utilisateurs externes ; le lancement officiel est à l'étude, conditionné au financement et aux obligations légales. |
-| **Mon rôle** | Product owner et validateur humain. J'apporte les idées et les arbitrages, je valide chaque proposition, la recette et la promotion. Les agents consolident, implémentent, testent et déploient. |
+| **Mon rôle** | Product owner, validateur humain et client. J'apporte les idées et les arbitrages, je valide chaque proposition, la recette et la promotion. Les agents consolident, implémentent, testent et déploient. |
 | **Surfaces** | Web / PWA, Android, Android TV (testées sur trois profils distincts) |
 | **Stack** | React · Vite · Fastify · Capacitor · PostgreSQL / Supabase · Prisma |
 | **Dossier complet** | [Fiche projet](projects/brewno/README.md) · [Décisions](projects/brewno/decisions.md) · [Architecture](projects/brewno/architecture/) |
