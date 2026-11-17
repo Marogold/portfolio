@@ -3,10 +3,10 @@
 **Qualité et gouvernance de l'ingénierie assistée par IA**
 *Je conçois, je spécifie et je vérifie, y compris le travail des agents.*
 
-Plus de 25 ans en assurance qualité et en leadership (Ubisoft, Warner Bros Games, la plus grande
-coopérative financière). Plus récemment, je travaille à l'adoption de l'IA en développement
-logiciel : créer les conditions techniques, méthodologiques et humaines pour en faire des pratiques
-concrètes, maîtrisées et durables. Je suis resté proche du technique : ce dépôt le montre.
+Plus de 25 ans en assurance qualité et en leadership (Ubisoft, Warner Bros Games, un grand groupe
+financier). Plus récemment, je travaille à l'adoption de l'IA en développement logiciel : créer les
+conditions techniques, méthodologiques et humaines pour en faire des pratiques concrètes, maîtrisées
+et durables. Je suis resté proche du technique : ce dépôt le montre.
 
 Je conçois des produits où l'IA propose et où l'application décide. Les composants probabilistes
 vivent derrière des frontières déterministes, avec des tests, une chaîne de livraison et une
