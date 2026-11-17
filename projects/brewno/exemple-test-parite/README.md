@@ -2,7 +2,7 @@
 
 ← [Retour au projet](../README.md) · [Décision n°1](../decisions.md#1-dupliquer-des-formules-puis-les-verrouiller-par-un-test-de-parité)
 
-Le code source de BrewMaster Pro est privé. Ce mini-projet est une **démonstration autonome** de la
+Le code source de Brewno est privé. Ce mini-projet est une **démonstration autonome** de la
 technique de test décrite dans la décision n°1, que vous pouvez lancer vous-même :
 
 ```bash
