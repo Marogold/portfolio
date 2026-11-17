@@ -9,7 +9,7 @@ source est privé ; cette page présente l'architecture, les décisions et les p
 
 | | |
 |---|---|
-| **Statut** | En production, utilisé en conditions réelles pour mes brassins personnels. Pas encore d'utilisateurs externes ; le lancement officiel est à l'étude, conditionné au financement et aux obligations légales. |
+| **Statut** | En production, utilisé en conditions réelles pour mes brassins personnels. Pas encore d'utilisateurs externes ; le lancement officiel est à l'étude, conditionné aux obligations légales. |
 | **Mon rôle** | Product owner et validateur humain. J'apporte les idées et les arbitrages, je valide chaque proposition, la recette et la promotion. Les agents consolident, implémentent, testent et déploient. |
 | **Surfaces** | Web / PWA, Android, Android TV (testées sur trois profils distincts) |
 | **Stack** | React · Vite · Fastify · Capacitor · PostgreSQL / Supabase (pgvector) · Prisma · Vitest · Playwright · fast-check |

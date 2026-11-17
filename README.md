@@ -1,8 +1,24 @@
-# Pascal Gauthier — Ingénierie Qualité & IA
+# Pascal Gauthier — Ingénieur qualité principal
 
-Je construis des produits où l'IA propose et où l'application décide. Les composants probabilistes
+**Qualité et gouvernance de l'ingénierie assistée par IA**
+*Je conçois, je spécifie et je vérifie, y compris le travail des agents.*
+
+Plus de 25 ans en assurance qualité et en leadership (Ubisoft, Warner Bros Games, la plus grande
+coopérative financière). Plus récemment, je travaille à l'adoption de l'IA en développement
+logiciel : créer les conditions techniques, méthodologiques et humaines pour en faire des pratiques
+concrètes, maîtrisées et durables. Je suis resté proche du technique : ce dépôt le montre.
+
+Je conçois des produits où l'IA propose et où l'application décide. Les composants probabilistes
 vivent derrière des frontières déterministes, avec des tests, une chaîne de livraison et une
-sécurité traités comme des exigences de conception, pas comme une finition.
+sécurité traités comme des exigences de conception, pas comme une finition. Je suis l'humain dans
+la boucle : les agents écrivent, c'est moi qui décide ce qui est correct.
+
+**À l'écoute d'opportunités.** Un rôle de contributeur technique avec influence : construire les
+cadres, pratiques et environnements qui permettent aux équipes d'intégrer l'IA à l'ingénierie
+logicielle de façon responsable. Grand Montréal en hybride, ou télétravail.
+
+**À voir en premier.** [Brewno](#brewno), en production pour un utilisateur (moi) ·
+[Un test de parité exécutable](projects/brewno/exemple-test-parite/README.md) (`pnpm test`, 1 minute)
 
 **GitHub** : [github.com/Marogold](https://github.com/Marogold) · **LinkedIn** : [linkedin.com/in/gauthierpascal](https://www.linkedin.com/in/gauthierpascal/)
 
@@ -42,7 +58,7 @@ sécurité traités comme des exigences de conception, pas comme une finition.
 
 | | |
 |---|---|
-| **Statut** | En production, utilisé en conditions réelles pour mes brassins personnels. Pas encore d'utilisateurs externes ; le lancement officiel est à l'étude, conditionné au financement et aux obligations légales. |
+| **Statut** | En production, utilisé en conditions réelles pour mes brassins personnels. Pas encore d'utilisateurs externes ; le lancement officiel est à l'étude, conditionné aux obligations légales. |
 | **Mon rôle** | Product owner, validateur humain et client. J'apporte les idées et les arbitrages, je valide chaque proposition, la recette et la promotion. Les agents consolident, implémentent, testent et déploient. |
 | **Surfaces** | Web / PWA, Android, Android TV (testées sur trois profils distincts) |
 | **Stack** | React · Vite · Fastify · Capacitor · PostgreSQL / Supabase · Prisma |
