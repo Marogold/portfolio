@@ -77,13 +77,13 @@ action sensible (proposition seulement, confirmation explicite requise).
 
 ### Chiffres clés
 
-*Relevé statique du dépôt privé, 2026-11-15 (commit `927d005c`), produit par un script.*
+*Relevé statique du dépôt privé, état du commit `927d005c` (2026-11-08), produit par un script.*
 
 | Mesure | Valeur |
 |---|---|
-| Historique | environ 2 000 commits en 16 semaines |
+| Historique | environ 2 000 commits en 15 semaines |
 | Tests | 433 fichiers de tests, environ 4 100 cas (comptage statique) |
-| E2E | 36 fichiers, 213 cas (comptage statique) |
+| E2E | 36 fichiers, 196 cas (appels `test()` statiques) |
 | Données | 36 modèles, 63 migrations versionnées |
 | Livraison | 22 workflows CI/CD, 88 actions sur 88 épinglées par empreinte SHA |
 | Documentation | 189 pages sous `docs/`, liens vérifiés automatiquement |

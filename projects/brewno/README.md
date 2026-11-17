@@ -49,15 +49,15 @@ Cliquez sur un diagramme pour ouvrir sa version vectorielle (`.svg`), nette à t
 
 ## Chiffres
 
-*Relevé statique du dépôt privé, 2026-11-15 (commit `927d005c`), produit par un script. Le dépôt
+*Relevé statique du dépôt privé, état du commit `927d005c` (2026-11-08), produit par un script. Le dépôt
 étant privé, ces chiffres sont des relevés de l'auteur, non vérifiables de l'extérieur.*
 
 | Mesure | Valeur | Méthode |
 |---|---|---|
-| Historique | 1 985 commits, 16 semaines | `git rev-list --count HEAD`, depuis le premier commit (2026-07-26) |
+| Historique | 1 985 commits, 15 semaines | `git rev-list --count 927d005c`, du premier commit (2026-07-26) au commit cité (2026-11-08) |
 | Fichiers de tests | 433 | fichiers `*.test` ou `*.spec` suivis par git |
 | Cas de tests | environ 4 100 | occurrences de `it(` et `test(` ; comptage statique approximatif |
-| E2E | 36 fichiers, 213 cas | sous `tests/e2e` ; comptage statique |
+| E2E | 36 fichiers, 196 cas | appels `test()` sous `tests/e2e`, comptage statique ; les `test.skip()` conditionnels placés dans un test ne sont pas des cas |
 | Tests de la CI elle-même | 21 fichiers | sous `tests/unit/ci` |
 | Workflows CI/CD | 22 | `.github/workflows` |
 | Actions épinglées par SHA | 88 sur 88 | références `uses:` externes terminées par une empreinte de 40 caractères |
