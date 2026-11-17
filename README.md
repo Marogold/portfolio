@@ -30,7 +30,7 @@ sécurité traités comme des exigences de conception, pas comme une finition.
 | Projet | En une phrase | Statut | Fiche |
 |---|---|---|---|
 | [Brewno](#brewno) *(anciennement BrewMaster Pro)* | Assistant IA pour brasseurs : le modèle propose, l'application décide | En production, usage personnel | [Dossier](projects/brewno/README.md) |
-| [Memory-Cortex](#memory-cortex) | Mémoire projet pour le travail assisté par agents | En développement | [Dossier](projects/memory-cortex/README.md) |
+| [Memory-Cortex](#memory-cortex) | Mémoire projet pour le travail assisté par agents | Utilisé sur deux projets | [Dossier](projects/memory-cortex/README.md) |
 
 ---
 
@@ -122,7 +122,7 @@ Chacune est détaillée (contexte, options écartées, limite assumée) dans
 
 | | |
 |---|---|
-| **Statut** | En développement. La direction (réduire le couplage du contexte projet aux outils et aux agents) n'est pas revendiquée comme livrée. |
+| **Statut** | Utilisé sur deux de mes projets ; 96 tests passent (relevé du 2026-11-17). La direction (réduire le couplage du contexte projet aux outils et aux agents) n'est pas revendiquée comme livrée. |
 | **Principe** | Le Markdown versionné dans Git fait foi ; l'index de rappel en est dérivé, jetable et reconstructible. |
 | **Dossier complet** | [Fiche projet](projects/memory-cortex/README.md) |
 
