@@ -13,7 +13,9 @@ vivent derrière des frontières déterministes, avec des tests, une chaîne de 
 sécurité traités comme des exigences de conception, pas comme une finition. Je suis l'humain dans
 la boucle : les agents écrivent, c'est moi qui décide ce qui est correct.
 
-**À l'écoute d'opportunités.** Un rôle où je peux bâtir, avec les équipes, la gouvernance et les pratiques de qualité qui permettent d'intégrer l'IA à l'ingénierie logicielle de façon responsable. Grand Montréal en hybride, ou télétravail.
+**À l'écoute d'opportunités.** Un rôle où je peux bâtir, avec les équipes, la gouvernance et les
+pratiques de qualité qui permettent d'intégrer l'IA à l'ingénierie logicielle de façon responsable.
+Grand Montréal en hybride, ou télétravail.
 
 **À voir en premier.** [Brewno](#brewno), en production pour un utilisateur (moi) ·
 [Un test de parité exécutable](projects/brewno/exemple-test-parite/README.md) (`pnpm test`, 1 minute)
@@ -23,7 +25,7 @@ la boucle : les agents écrivent, c'est moi qui décide ce qui est correct.
 **Stack** : React · Vite · Fastify · Capacitor · PostgreSQL / Supabase (pgvector) · Prisma · Vitest · Playwright · fast-check · GitHub Actions · Vercel
 
 > [!NOTE]
-> Ce dépôt est une vue publique choisie de mon travail : **architecture, décisions, preuves**.
+> Ce dépôt est une vue publique choisie de mon travail : **architecture, QA, décisions, preuves**.
 > Le code source des projets reste privé. Chaque projet est présenté de façon autonome dans son
 > propre dossier sous [`projects/`](projects/).
 
