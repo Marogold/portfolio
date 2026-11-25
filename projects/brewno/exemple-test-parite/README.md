@@ -13,23 +13,18 @@ pnpm test         # 5 tests, moins d'une seconde
 
 ## L'histoire
 
-Le calcul du sucre d'amorçage (grammes de sucre à ajouter avant la mise en bouteille) existait en
-trois copies : à l'écran, côté serveur et dans l'assistant. Elles avaient divergé en silence.
+Le calcul du sucre d'amorçage (grammes de sucre à ajouter avant la mise en bouteille) existait en trois copies : à l'écran, côté serveur et dans l'assistant. Elles avaient divergé en silence.
 
-En brassant, j'ai vu l'assistant me donner **118 g** pour 20 L à 2,4 volumes de CO₂, alors que
-l'écran affichait **29 g**. Aucun test ne l'avait vu. Un facteur 4 en sous-estimation donne une
-bière sous-carbonatée ; dans l'autre sens, ce serait un risque pour les bouteilles.
+En brassant 20 L visés à 2,4 volumes de CO₂ (bière à 20°C), l'assistant m'a donné 118 g, une valeur correcte, alors que l'écran affichait 29 g. Aucun test ne l'avait vu. Un facteur 4 en sous-estimation donne une bière sous-carbonatée ; dans l'autre sens, ce serait un risque pour les bouteilles.
 
-Corriger la formule a pris quelques lignes. Le travail utile a été de rendre cette classe de bug
-détectable : deux copies sont gardées volontairement (pas de refonte pour un correctif), reliées par
-des tests.
+Corriger la formule a pris quelques lignes. Le vrai travail a été de rendre cette classe de bug détectable. [La troisième copie a été supprimée / fusionnée avec …]. Les deux copies restantes sont gardées volontairement (pas de refonte pour un correctif) et reliées par des tests.
 
 ## Ce que montrent les quatre fichiers de test
 
 | Fichier | Ce qu'il établit |
 |---|---|
 | [`parity.test.ts`](test/parity.test.ts) | Les deux copies donnent les **mêmes** grammes sur tous les cas. Garantit la *cohérence*. |
-| [`anchor.test.ts`](test/anchor.test.ts) | Des valeurs connues écrites en dur (118 g, 137 g). Garantit l'*exactitude*. |
+| [`anchor.test.ts`](test/anchor.test.ts) | Deux valeurs connues écrites en dur, vérifiées sur chacune des deux copies : 118 g (20 L, 2,4 vol, 20 °C) et 137 g (25 L, 2,3 vol, 20 °C). Garantit l'exactitude. |
 | [`detection.test.ts`](test/detection.test.ts) | **Le test est testé** : l'ancienne copie fautive (29 g) est bien rejetée. Un contrôle qui ne peut pas échouer ne prouve rien. |
 | [`limits.test.ts`](test/limits.test.ts) | **Limite assumée** : si les deux copies se trompent pareil, la parité reste verte. Seul l'ancrage réagit. |
 
