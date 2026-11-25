@@ -1,7 +1,7 @@
-# Pascal Gauthier — Ingénieur qualité principal
+# Pascal Gauthier — Leader en qualité logicielle
 
-**Qualité et gouvernance de l'ingénierie assistée par IA**
-*Je conçois, je spécifie et je vérifie, y compris le travail des agents.*
+**Prévenir plutôt que guérir : la qualité se construit à chaque étape, avec tous les acteurs.**
+*Aujourd'hui, avec l'IA : je conçois, je spécifie et je vérifie, y compris le travail des agents.*
 
 Plus de 25 ans en assurance qualité et en leadership (Ubisoft, Warner Bros Games, un grand groupe
 financier). Plus récemment, je travaille à l'adoption de l'IA en développement logiciel : créer les
@@ -13,9 +13,7 @@ vivent derrière des frontières déterministes, avec des tests, une chaîne de 
 sécurité traités comme des exigences de conception, pas comme une finition. Je suis l'humain dans
 la boucle : les agents écrivent, c'est moi qui décide ce qui est correct.
 
-**À l'écoute d'opportunités.** Un rôle de contributeur technique avec influence : construire les
-cadres, pratiques et environnements qui permettent aux équipes d'intégrer l'IA à l'ingénierie
-logicielle de façon responsable. Grand Montréal en hybride, ou télétravail.
+**À l'écoute d'opportunités.** Un rôle où je peux bâtir, avec les équipes, la gouvernance et les pratiques de qualité qui permettent d'intégrer l'IA à l'ingénierie logicielle de façon responsable. Grand Montréal en hybride, ou télétravail.
 
 **À voir en premier.** [Brewno](#brewno), en production pour un utilisateur (moi) ·
 [Un test de parité exécutable](projects/brewno/exemple-test-parite/README.md) (`pnpm test`, 1 minute)
